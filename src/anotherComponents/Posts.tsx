@@ -3,7 +3,6 @@ import {dishes, menus} from '../components/Data/data';
 import Post from './Post';
 function Posts() {
     let category: string = "";
-    let allDishes = [];
     document.addEventListener('click',function (event){
         if(event.target){
             category = ((event.target as Element).innerHTML).toString();
@@ -15,7 +14,11 @@ function Posts() {
         } else {
             if(!event.target){
                 for(let categoryName in dishes){
-                    dishes[categoryName].map();
+                    return (
+                    dishes[categoryName].map(post => {
+                        <Post post={post} />
+                    })
+                    );
                 }
             }
         }

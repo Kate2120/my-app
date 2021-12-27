@@ -1,12 +1,22 @@
 import React, {useState} from 'react';
 
-function Post = (porps) => {
+function Post(porps) {
     return (
-        <div className="post">
-            <img className="post_image" href="{props.image}" width="" height="" alt="" />
-            <h2>{props.title}</h2>
-            <p>{props.descriptiom}</p>
-        </div>
+        
+            <div className="product">
+                    <h2>{item.title}</h2>
+                    <div className="OneProduct">
+                    <div className="img-one">
+                        <img src={item.image} alt={item.title} title={item.title} />
+                    </div>
+                    <div className="description">
+                        <p>
+                            {item.description}
+                        </p>
+                    </div>
+                    </div>
+                </div>
+        
     );
 };
 

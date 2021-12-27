@@ -63,7 +63,7 @@ function Filter() {
                 </p>
                 </div>
             )}
-            <Dish/>
+            <Post/>
         </div>
         </div>
      );
