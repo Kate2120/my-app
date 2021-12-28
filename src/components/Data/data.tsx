@@ -48,11 +48,11 @@ let arrayDish: Info[] = [
     }
 ];
 
-/*interface Dishes{
+export interface Dishes{
     [key: string]: Info[];
-}*/
+}
 
-let dishes = {
+let dishes: Dishes = {
     "Горячие блюда из мяса": [
                                 {
                                     title: "Мясо Слоёное",
@@ -120,4 +120,3 @@ let menus: string[] = [
 ];
 
 export {arrayDish, menus, dishes};
-export type Dishes = typeof dishes;

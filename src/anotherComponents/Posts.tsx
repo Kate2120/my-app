@@ -8,26 +8,24 @@ interface Info{
     image:string;
 }
 import {Dishes} from "../components/Data/data";
-let allDishes: Dishes = {dishes};
-function Posts() {
+import { JsxElement } from 'typescript';
+function Posts(): JSX.Element {
     let category: string = "";
     document.addEventListener('click',function (event){
         if(event.target){
             category = (event.target as Element).innerHTML;
-            let arr: Info[] = allDishes[category];
             return (
-                arr.map(post => {
-                    <Post post={post} />
+                dishes[category].map(post => {
+                    
                 })
             );
         } else {
             if(!event.target){
                 for(let categoryName in dishes){
                     return (
-                        {dishes[categoryName].map(post => {
-                        <Post />
-                    })}
-                    );
+                        <h2>{}</h2>
+                    
+                    )
                 }
             }
         }
