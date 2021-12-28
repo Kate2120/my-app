@@ -7,9 +7,7 @@ interface Info{
     category: string;
     image:string;
 }
-interface Dishes{
-    [key: string]: Info[];
-}
+import {Dishes} from "../components/Data/data";
 let allDishes: Dishes = {dishes};
 function Posts() {
     let category: string = "";
